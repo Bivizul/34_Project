@@ -12,14 +12,14 @@ import coil.compose.AsyncImage
 @Composable
 actual fun Stoplosibl() {
 
-    val betstratorient = LocalConfiguration.current.orientation
-    val betstratImgModel = when (betstratorient) {
+    val stoplosorient = LocalConfiguration.current.orientation
+    val stoplosImgModel = when (stoplosorient) {
         Configuration.ORIENTATION_PORTRAIT -> Stoploscon.STOPLOSBV
         else -> Stoploscon.STOPLOSBH
     }
 
     AsyncImage(
-        model = betstratImgModel,
+        model = stoplosImgModel,
         contentDescription = null,
         modifier = Modifier.fillMaxSize(),
         contentScale = ContentScale.Crop,

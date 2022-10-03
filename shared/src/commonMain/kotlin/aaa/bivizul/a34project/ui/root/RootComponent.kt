@@ -30,7 +30,7 @@ class RootComponent constructor(
     private val stack =
         childStack(
             source = navigation,
-            initialConfiguration = Config.BetstratpConfig,
+            initialConfiguration = Config.StoplospConfig,
             handleBackButton = true,
             childFactory = ::createChild,
         )
@@ -39,8 +39,8 @@ class RootComponent constructor(
 
     private fun createChild(config: Config, componentContext: ComponentContext): RootModel.Child =
         when (config) {
-            is Config.BetstratpConfig -> RootModel.Child.BetstratpChild(
-                setBetstratp(componentContext)
+            is Config.StoplospConfig -> RootModel.Child.StoplospChild(
+                setStoplosp(componentContext)
             )
             is Config.MainConfig -> RootModel.Child.MainChild(
                 setMain(componentContext)
@@ -56,7 +56,7 @@ class RootComponent constructor(
             )
         }
 
-    private fun setBetstratp(
+    private fun setStoplosp(
         componentContext: ComponentContext
     ): StoplospModel = StoplospComponent(
         componentContext = componentContext,
@@ -95,7 +95,7 @@ class RootComponent constructor(
     ): ItemModel = ItemComponent(
         componentContext = componentContext,
         stoplossRepository = stoplossRepository,
-        betstratItemId = config.itemId
+        stoplosItemId = config.itemId
     )
 
     private fun setSettings(
@@ -106,7 +106,7 @@ class RootComponent constructor(
 
     private sealed class Config : Parcelable {
         @Parcelize
-        object BetstratpConfig : Config()
+        object StoplospConfig : Config()
 
         @Parcelize
         object MainConfig : Config()

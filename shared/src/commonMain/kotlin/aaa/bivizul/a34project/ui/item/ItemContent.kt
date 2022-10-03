@@ -29,7 +29,7 @@ fun ItemContent(
 
     if (stoplosItemList != null) {
         stoplosItemList?.let { list ->
-            list[model.selectedBetstratItemId - 1].let { item ->
+            list[model.selectedStoplosItemId - 1].let { item ->
 //                val stoplosinList = item.stoplosin
                 Column(
                     modifier = modifier
@@ -47,7 +47,7 @@ fun ItemContent(
                         text = item.stoplosdesc,
                         style = MaterialTheme.typography.body1
                     )
-//                    if (stoplosinList != emptyList<Betstratin>()) {
+//                    if (stoplosinList != emptyList<Stoplosin>()) {
 //                        for (i in stoplosinList) {
 //                            Text(
 //                                text = i.stoplossubtitle,

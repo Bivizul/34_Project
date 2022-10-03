@@ -10,10 +10,10 @@ import kotlinx.coroutines.flow.StateFlow
 class ItemComponent(
     componentContext: ComponentContext,
     stoplossRepository: StoplossRepository,
-    betstratItemId: Int,
+    stoplosItemId: Int,
 ) : ItemModel, ComponentContext by componentContext {
 
-    private val _models = MutableValue(ItemModel.Model(selectedBetstratItemId = betstratItemId))
+    private val _models = MutableValue(ItemModel.Model(selectedStoplosItemId = stoplosItemId))
     override val models: Value<ItemModel.Model> = _models
 
     override val state: StateFlow<List<Stoploss>?> =

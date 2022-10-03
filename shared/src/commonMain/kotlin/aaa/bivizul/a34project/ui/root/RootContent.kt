@@ -31,7 +31,7 @@ fun RootContent(
         animation = stackAnimation(fade() + slide()),
     ) {
         when (val child = it.instance) {
-            is RootModel.Child.BetstratpChild -> StoplospContent(component = child.component)
+            is RootModel.Child.StoplospChild -> StoplospContent(component = child.component)
             is RootModel.Child.MainChild -> MainContent(component = child.component)
             is RootModel.Child.ListChild -> ListContent(component = child.component)
             is RootModel.Child.ItemChild -> ItemContent(component = child.component)

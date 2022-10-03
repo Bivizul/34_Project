@@ -13,7 +13,7 @@ interface RootModel {
     val childStack: Value<ChildStack<*, Child>>
 
     sealed class Child {
-        class BetstratpChild(val component: StoplospModel) : Child()
+        class StoplospChild(val component: StoplospModel) : Child()
         class MainChild(val component: MainModel) : Child()
         class ListChild(val component: ListModel) : Child()
         class ItemChild(val component: ItemModel) : Child()

@@ -11,7 +11,7 @@ interface ItemModel {
     val state: StateFlow<List<Stoploss>?>
 
     data class Model(
-        val selectedBetstratItemId: Int
+        val selectedStoplosItemId: Int
     )
 
 }
