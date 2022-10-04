@@ -27,7 +27,7 @@ fun ListContent(
             LazyColumn(
                 modifier = modifier.padding(8.dp).fillMaxSize(),
                 verticalArrangement = Arrangement.SpaceAround,
-                horizontalAlignment = Alignment.Start
+                horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 items(list) { stoplosItem ->
                     StoplosButton(

@@ -1,9 +1,7 @@
 package aaa.bivizul.a34project.ui.root
 
-import aaa.bivizul.a34project.data.repository.StoplossRepository
 import aaa.bivizul.a34project.data.repository.StoplosRepository
-import aaa.bivizul.a34project.ui.stoplosp.StoplospComponent
-import aaa.bivizul.a34project.ui.stoplosp.StoplospModel
+import aaa.bivizul.a34project.data.repository.StoplossRepository
 import aaa.bivizul.a34project.ui.item.ItemComponent
 import aaa.bivizul.a34project.ui.item.ItemModel
 import aaa.bivizul.a34project.ui.list.ListComponent
@@ -12,6 +10,8 @@ import aaa.bivizul.a34project.ui.main.MainComponent
 import aaa.bivizul.a34project.ui.main.MainModel
 import aaa.bivizul.a34project.ui.settings.SettingsComponent
 import aaa.bivizul.a34project.ui.settings.SettingsModel
+import aaa.bivizul.a34project.ui.stoplosp.StoplospComponent
+import aaa.bivizul.a34project.ui.stoplosp.StoplospModel
 import com.arkivanov.decompose.ComponentContext
 import com.arkivanov.decompose.router.stack.*
 import com.arkivanov.decompose.value.Value

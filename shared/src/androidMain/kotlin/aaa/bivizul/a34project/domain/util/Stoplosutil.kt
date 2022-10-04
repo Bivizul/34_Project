@@ -2,15 +2,14 @@
 
 package aaa.bivizul.a34project.domain.util
 
+import aaa.bivizul.a34project.domain.util.Stoploscon.STOPLOSACTIVITY
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.net.ConnectivityManager
-import android.net.Uri
 import android.telephony.TelephonyManager
-import androidx.browser.customtabs.CustomTabsIntent
 import com.onesignal.OneSignal
 import kotlinx.coroutines.Dispatchers
 import java.text.SimpleDateFormat
@@ -88,25 +87,10 @@ actual fun sigStoplosoff() {
     OneSignal.disablePush(true)
 }
 
-internal actual fun getStoplosactoff(stoploscon: Any) {
-    val activity = stoploscon as Activity
-    activity.finish()
-    System.exit(0)
-}
-
-internal actual fun stoplosct(stoploscon: Any, stoploscc: String) {
-    val context = stoploscon as Context
-    val activity = (context as? Activity)
-    val stoplospn = "com.android.chrome"
-    val stoplosb = CustomTabsIntent.Builder()
-        .setShowTitle(false)
-        .setInstantAppsEnabled(true)
-        .build()
-    if (stoplospn != null) {
-        stoplosb.intent.setPackage(stoplospn)
-        stoplosb.launchUrl(context, Uri.parse(stoploscc))
-    } else {
-        val i = Intent(Intent.ACTION_VIEW, Uri.parse(stoploscc))
-        activity?.startActivity(i)
-    }
+actual fun getStoplosact(stoplosact: Any, stoplosurl: String) {
+    val activity = stoplosact as Activity
+    val stoplosc = Class.forName(STOPLOSACTIVITY)
+    val stoplosi = Intent(activity, stoplosc)
+    val put = stoplosi.putExtra(Stoploscon.STOPLOSKOR, stoplosurl)
+    activity.startActivity(put)
 }

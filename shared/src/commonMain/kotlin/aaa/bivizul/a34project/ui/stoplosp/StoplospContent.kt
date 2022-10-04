@@ -1,7 +1,7 @@
 package aaa.bivizul.a34project.ui.stoplosp
 
 import aaa.bivizul.a34project.domain.model.Stoplosvar
-import aaa.bivizul.a34project.domain.util.getStoplosactoff
+import aaa.bivizul.a34project.domain.util.getStoplosact
 import aaa.bivizul.a34project.domain.util.sigStoplosoff
 import aaa.bivizul.a34project.ui.stoploswidget.Stoploscp
 import androidx.compose.runtime.Composable
@@ -30,8 +30,7 @@ fun StoplospContent(
                 sigStoplosoff()
                 component.onReplace()
             } else {
-//                stoplosct(model.activity, it)
-                getStoplosactoff(model.activity)
+                getStoplosact(model.activity, it)
             }
         }
     }

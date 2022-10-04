@@ -1,10 +1,10 @@
 package aaa.bivizul.a34project.ui.root
 
-import aaa.bivizul.a34project.ui.stoplosp.StoplospContent
 import aaa.bivizul.a34project.ui.item.ItemContent
 import aaa.bivizul.a34project.ui.list.ListContent
 import aaa.bivizul.a34project.ui.main.MainContent
 import aaa.bivizul.a34project.ui.settings.SettingsContent
+import aaa.bivizul.a34project.ui.stoplosp.StoplospContent
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier

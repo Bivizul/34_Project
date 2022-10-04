@@ -30,7 +30,6 @@ fun ItemContent(
     if (stoplosItemList != null) {
         stoplosItemList?.let { list ->
             list[model.selectedStoplosItemId - 1].let { item ->
-//                val stoplosinList = item.stoplosin
                 Column(
                     modifier = modifier
                         .verticalScroll(scrollState)
@@ -47,18 +46,6 @@ fun ItemContent(
                         text = item.stoplosdesc,
                         style = MaterialTheme.typography.body1
                     )
-//                    if (stoplosinList != emptyList<Stoplosin>()) {
-//                        for (i in stoplosinList) {
-//                            Text(
-//                                text = i.stoplossubtitle,
-//                                style = MaterialTheme.typography.h6
-//                            )
-//                            Text(
-//                                text = i.stoplossubdesc,
-//                                style = MaterialTheme.typography.body1
-//                            )
-//                        }
-//                    }
                 }
             }
         }

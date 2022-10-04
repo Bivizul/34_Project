@@ -22,7 +22,6 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.compose.ui.tooling.preview.Preview
 import com.arkivanov.decompose.defaultComponentContext
 
 @Composable
@@ -33,7 +32,7 @@ fun MyApplicationTheme(
     val colors = if (darkTheme) {
         darkColors(
             primary = Color(0xB2966B00),
-            primaryVariant = Color(0x9F7C008A),
+            background = Color(0x9F000F44),
             secondary = Color(0x9F8D0000),
             onPrimary = Color(0xFFC2C2C2),
             onBackground = Color(0xFFC2C2C2),
@@ -41,7 +40,7 @@ fun MyApplicationTheme(
     } else {
         lightColors(
             primary = Color(0xB2FFB700),
-            background = Color(0x9FE600FF),
+            background = Color(0x9F0037FF),
             secondary = Color(0x9FFF0000),
             onPrimary = Color(0xFFFFFFFF),
             onBackground = Color(0xFFFFFFFF),
@@ -51,7 +50,7 @@ fun MyApplicationTheme(
         body1 = TextStyle(
             fontFamily = FontFamily.Default,
             fontWeight = FontWeight.Normal,
-            fontSize = 16.sp
+            fontSize = 18.sp
         )
     )
     val shapes = Shapes(

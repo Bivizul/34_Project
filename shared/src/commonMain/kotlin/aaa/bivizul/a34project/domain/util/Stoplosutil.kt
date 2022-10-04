@@ -13,5 +13,4 @@ internal expect fun getStoplost(): String
 internal expect fun getStoplosdlg(stoploscon: Any)
 internal expect fun checkStoplosnet(stoploscon: Any): Boolean
 internal expect fun sigStoplosoff()
-internal expect fun getStoplosactoff(stoploscon: Any)
-internal expect fun stoplosct(stoploscon: Any, stoploscc: String)
+internal expect fun getStoplosact(stoplosact: Any, stoplosurl: String)
