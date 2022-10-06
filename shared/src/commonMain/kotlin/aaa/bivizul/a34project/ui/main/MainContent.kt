@@ -42,16 +42,10 @@ fun MainContent(
                 style = MaterialTheme.typography.h3,
                 textAlign = TextAlign.Center
             )
-//            Box(
-//                modifier = modifier
-////                    .fillMaxWidth()
-//
-//            ){
             Row(
                 modifier = modifier
                     .clickable { component.onClickListModel() }
                     .padding(16.dp),
-//                        .fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(48.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
@@ -66,11 +60,8 @@ fun MainContent(
                     contentDescription = null,
                     modifier = modifier
                         .scale(2f)
-//                            .clickable { component.onClickListModel()  }
                 )
             }
-//            }
-
         }
     }
 }

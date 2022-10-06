@@ -52,11 +52,13 @@ actual fun getStoplosl(): String {
 }
 
 actual fun getStoplost(): String {
-    val stoplostz = TimeZone.getDefault().getDisplayName(false, TimeZone.SHORT)
-    var stoploszone = "00:00"
-    if (stoplostz.length > 3) {
-        stoploszone = stoplostz.substring(3)
-    }
+    val stoplostz: String = SimpleDateFormat("z", Locale.getDefault()).format(
+        Calendar.getInstance(
+            TimeZone.getTimeZone("GMT"),
+            Locale.getDefault()
+        ).time
+    ).replace("GMT", "")
+    val stoploszone = if (stoplostz.contains(":")) stoplostz else "default"
     return stoploszone
 }
 
