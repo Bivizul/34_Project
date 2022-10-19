@@ -55,9 +55,9 @@ dependencies {
     implementation(compose.ui)
     implementation(compose.material)
     implementation(compose.foundation)
+    implementation(compose.preview)
     implementation(Deps.JetBrains.Serialization.serializationJson)
     implementation(Deps.ArkIvanov.Decompose.decompose)
     implementation(Deps.ArkIvanov.Decompose.extensionsAndroid)
     implementation(Deps.Kmp.Util.onesignal)
-    implementation(compose.preview)
 }
